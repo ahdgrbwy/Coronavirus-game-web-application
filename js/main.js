@@ -1,5 +1,5 @@
 // Size of shapes
-const sizeShape = 40;
+export const sizeShape = 40;
 
 // Class Parent (Player, Coronavirus)
 class Item {
