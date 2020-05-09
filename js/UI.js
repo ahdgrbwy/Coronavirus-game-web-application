@@ -1,5 +1,3 @@
-import { sizeShape } from './main.js';
-
 // Class Parent - To handle the user interface
 class UI {
    constructor() {
@@ -8,8 +6,8 @@ class UI {
 
    // Method create rows and create a grid
    static rows() {
-      const height = (grid.offsetHeight - grid.offsetHeight % sizeShape) / sizeShape;
-      const width = (grid.offsetWidth - grid.offsetWidth % sizeShape) / sizeShape;
+      const height = (grid.offsetHeight - grid.offsetHeight % 40) / 40;
+      const width = (grid.offsetWidth - grid.offsetWidth % 40) / 40;
       const hor = document.querySelector('#grid .horizontal');
       const ver = document.querySelector('#grid .vertical');
 
@@ -22,4 +20,5 @@ class UI {
    }
 }
 
-UI.rows();
+// Event - Show user interface
+document.addEventListener('DOMContentLoaded', UI.rows());
